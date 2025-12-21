@@ -1,0 +1,27 @@
+window.onload = function() { 
+    document.querySelector('#push').onclick = function() {
+        if (document.querySelector('#newtask input').value.length == 0) {
+            alert(читать );
+        } else {
+            document.querySelector('#tasks').innerHTML += 
+                <div class="task">
+                    <span id="taskname">
+                        ${document.querySelector('#newtask input').value}
+                    </span>
+                    <button class="delete">
+                        <i class="far fa-trash-alt"></i> Удалить
+                    </button>
+                </div>
+            ;
+
+            var current_tasks = document.querySelectorAll(".delete");
+            for (var i = 0; i < current_tasks.length; i++) {
+                current_tasks[i].onclick = function() {
+                    this.parentNode.remove();
+                }
+            }
+            // Очистка поля ввода после добавления задачи
+            document.querySelector('#newtask input').value = '';
+        }
+    }
+}
