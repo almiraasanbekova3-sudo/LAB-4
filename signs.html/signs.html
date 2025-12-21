@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дорожные знаки с подсказками</title>
+</head>
+<body>
+    <style>
+        .image-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .image-table td {
+           /* border: 2px solid #333;*/
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+            width: 20%;
+            height: 150px;
+             cursor: pointer;
+              position: relative;
+        }
+        
+        .image-table img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .image-cell {
+            background-color: #ffffff;
+            color: #666;
+            font-size: 14px;
+        }
+        .image-cell:hover {
+            background-color: #ffffff;
+            transform: scale(1.05);
+        }
+         .placeholder {
+            background-color: #ffffff;
+            color: #f5efef;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+         .placeholder:hover {
+            background-color: #e0e0e0;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный */
+            color: rgb(252, 246, 246);
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 16px;
+            position: absolute;
+            z-index: 1000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 14px;
+            line-height: 1.4;
+            backdrop-filter: blur(5px); /* Эффект размытия фона */
+            border: 1px solid rgba(1, 1, 1, 0.2);
+            min-width: 140px;
+            max-width: 180px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+           .image-cell:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <table class="image-table">
+        <tr>
+            <td class="image-cell"><div class="placeholder"><image src="1_10.svg"></image><div class="tooltip">дорожный знак Выездь на набережнее</div></div></td>
+            <td class="image-cell"><div class="placeholder"><image src="1_15.svg"></image><div class="tooltip">дорожный знак Скользкая дорога</div></div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="1_21.svg"></image><div class="tooltip"> дорожный знак Двустороннее движение</div></div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="1_27.svg"></image><div class="tooltip">дорожный знак Дикие животные</div></div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="1_30.svg"></image><div class="tooltip">дорожный знак Боковой ветер</div></div> </td>
+        </tr>
+        <tr>
+            <td class="image-cell"><div class="placeholder"><image src="2_1.svg"></image><div class="tooltip">дорожный знак Главная дорога</div> </div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="2_3_1.svg"></image><div class="tooltip">Предупреждающий знак</div></div>  </td>
+            <td class="image-cell"><div class="placeholder"><image src="2_5.svg"></image><div class="tooltip">дорожный знак  Для остановки движения.</div> </div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="2_6.svg"></image><div class="tooltip">дорожный знак   Преимущество встречного движения</div> </div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="2_7.svg"></image> <div class="tooltip">дорожный знак  Преимущество перед встречным движением</div></div> </td>
+        </tr>
+        <tr>
+            <td class="image-cell"><div class="placeholder"><image src="3_4.svg"></image> <div class="tooltip">дорожный знак Движение грузовых автомобилей запрещено</div></div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="3_7.svg"></image><div class="tooltip">дорожный знак Движение с прицепом запрещено</div> </div> </td>
+            <td class="image-cell"><div class="placeholder"><image src="3_10.svg"></image><div class="tooltip">дорожный знак  Движение пешеходов запрещено</div></div>  </td>
+            <td class="image-cell"><div class="placeholder"><image src="3_13.svg"></image><div class="tooltip">дорожный знак  Ограничение по высоте 4,5 м</div></div>  </td>
+            <td class="image-cell"><div class="placeholder"><image src="3_19.svg"></image><div class="tooltip">дорожный знак Разворот запрещен</div></div>  </td>
+        </tr>
+    </table>
+</body>
+
+</html>
